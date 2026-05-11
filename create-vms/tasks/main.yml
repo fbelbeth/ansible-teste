@@ -15,3 +15,7 @@
     - name: debug resultado do curl
       ansible.builtin.debug:
         var: curl_google.stdout
+
+- name: fala a frase definida na variável
+  ansible.builtin.debug:
+    msg: "{{ frase }}"
