@@ -1,0 +1,17 @@
+---
+
+- block:
+    - name: testar se google.com:443 está acessível com wait_for
+      ansible.builtin.wait_for:
+        host: "google.com"
+        port: 443
+        timeout: 10
+      register: waitfor_google
+  rescue:
+    - name: tentar curl telnet para google.com:443 como fallback
+      ansible.builtin.raw: "curl -s --connect-timeout 10 https://google.com:442 > /dev/null && echo 'success' || echo 'failure'"
+      register: curl_google
+
+    - name: debug resultado do curl
+      ansible.builtin.debug:
+        var: curl_google.stdout
