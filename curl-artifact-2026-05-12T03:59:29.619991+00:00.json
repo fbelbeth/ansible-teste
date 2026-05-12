@@ -1,0 +1,709 @@
+{
+    "plays": [
+        {
+            "___progress": "100%",
+            "__changed": 1,
+            "__failed": 0,
+            "__ignored": 0,
+            "__in progress": 0,
+            "__ok": 1,
+            "__percent_complete": 100,
+            "__play_name": "Criar inventário dinâmico a partir de extra-vars",
+            "__progress": "Complete",
+            "__skipped": 0,
+            "__task_count": 1,
+            "__unreachable": 0,
+            "name": "Criar inventário dinâmico a partir de extra-vars",
+            "pattern": "localhost",
+            "play": "Criar inventário dinâmico a partir de extra-vars",
+            "play_pattern": "localhost",
+            "play_uuid": "3fc63426-c499-bc45-d24b-000000000002",
+            "playbook": "/home/belbeth/projects/create-vms/curl.yml",
+            "playbook_uuid": "4d234051-2327-4c17-9332-2f3a2430be3e",
+            "tasks": [
+                {
+                    "__changed": true,
+                    "__duration": "0s",
+                    "__host": "localhost",
+                    "__number": 0,
+                    "__result": "Ok",
+                    "__task": "Adicionar hosts ao grupo temporário 'grupo_dinamico'",
+                    "__task_action": "add_host",
+                    "duration": 0.01863,
+                    "end": "2026-05-12T03:59:27.804542+00:00",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "Criar inventário dinâmico a partir de extra-vars",
+                    "play_pattern": "localhost",
+                    "play_uuid": "3fc63426-c499-bc45-d24b-000000000002",
+                    "playbook": "/home/belbeth/projects/create-vms/curl.yml",
+                    "playbook_uuid": "4d234051-2327-4c17-9332-2f3a2430be3e",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "changed": true,
+                        "msg": "All items completed",
+                        "results": [
+                            {
+                                "_ansible_item_label": "192.168.1.9",
+                                "_ansible_no_log": false,
+                                "add_host": {
+                                    "groups": [
+                                        "dinamico"
+                                    ],
+                                    "host_name": "192.168.1.9",
+                                    "host_vars": {}
+                                },
+                                "ansible_loop_var": "item",
+                                "changed": true,
+                                "failed": false,
+                                "item": "192.168.1.9"
+                            },
+                            {
+                                "_ansible_item_label": "192.168.122.148",
+                                "_ansible_no_log": false,
+                                "add_host": {
+                                    "groups": [
+                                        "dinamico"
+                                    ],
+                                    "host_name": "192.168.122.148",
+                                    "host_vars": {}
+                                },
+                                "ansible_loop_var": "item",
+                                "changed": true,
+                                "failed": false,
+                                "item": "192.168.122.148"
+                            },
+                            {
+                                "_ansible_item_label": "192.168.122.130",
+                                "_ansible_no_log": false,
+                                "add_host": {
+                                    "groups": [
+                                        "dinamico"
+                                    ],
+                                    "host_name": "192.168.122.130",
+                                    "host_vars": {}
+                                },
+                                "ansible_loop_var": "item",
+                                "changed": true,
+                                "failed": false,
+                                "item": "192.168.122.130"
+                            }
+                        ]
+                    },
+                    "resolved_action": "ansible.builtin.add_host",
+                    "start": "2026-05-12T03:59:27.785912+00:00",
+                    "task": "Adicionar hosts ao grupo temporário 'grupo_dinamico'",
+                    "task_action": "add_host",
+                    "task_args": "",
+                    "task_path": "/home/belbeth/projects/create-vms/curl.yml:6",
+                    "task_uuid": "3fc63426-c499-bc45-d24b-000000000004",
+                    "uuid": "56d16cfa-881a-4d6c-b78b-4c414144fee1"
+                }
+            ],
+            "uuid": "3fc63426-c499-bc45-d24b-000000000002"
+        },
+        {
+            "___progress": "100%",
+            "__changed": 1,
+            "__failed": 1,
+            "__ignored": 0,
+            "__in progress": 0,
+            "__ok": 6,
+            "__percent_complete": 100,
+            "__play_name": "Rodar automação nos hosts recebidos",
+            "__progress": "Complete",
+            "__skipped": 0,
+            "__task_count": 7,
+            "__unreachable": 0,
+            "name": "Rodar automação nos hosts recebidos",
+            "pattern": "dinamico",
+            "play": "Rodar automação nos hosts recebidos",
+            "play_pattern": "dinamico",
+            "play_uuid": "3fc63426-c499-bc45-d24b-000000000005",
+            "playbook": "/home/belbeth/projects/create-vms/curl.yml",
+            "playbook_uuid": "4d234051-2327-4c17-9332-2f3a2430be3e",
+            "tasks": [
+                {
+                    "__changed": false,
+                    "__duration": "1s",
+                    "__host": "192.168.1.9",
+                    "__number": 0,
+                    "__result": "Ok",
+                    "__task": "testar se google.com:443 está acessível com wait_for",
+                    "__task_action": "ansible.builtin.wait_for",
+                    "duration": 1.30028,
+                    "end": "2026-05-12T03:59:29.110845+00:00",
+                    "event_loop": null,
+                    "host": "192.168.1.9",
+                    "play": "Rodar automação nos hosts recebidos",
+                    "play_pattern": "dinamico",
+                    "play_uuid": "3fc63426-c499-bc45-d24b-000000000005",
+                    "playbook": "/home/belbeth/projects/create-vms/curl.yml",
+                    "playbook_uuid": "4d234051-2327-4c17-9332-2f3a2430be3e",
+                    "remote_addr": "192.168.1.9",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "ansible_facts": {
+                            "discovered_interpreter_python": "/usr/bin/python3.14"
+                        },
+                        "changed": false,
+                        "elapsed": 0,
+                        "invocation": {
+                            "module_args": {
+                                "active_connection_states": [
+                                    "ESTABLISHED",
+                                    "FIN_WAIT1",
+                                    "FIN_WAIT2",
+                                    "SYN_RECV",
+                                    "SYN_SENT",
+                                    "TIME_WAIT"
+                                ],
+                                "connect_timeout": 5,
+                                "delay": 0,
+                                "exclude_hosts": null,
+                                "host": "google.com",
+                                "msg": null,
+                                "path": null,
+                                "port": 443,
+                                "search_regex": null,
+                                "sleep": 1,
+                                "state": "started",
+                                "timeout": 10
+                            }
+                        },
+                        "match_groupdict": {},
+                        "match_groups": [],
+                        "path": null,
+                        "port": 443,
+                        "search_regex": null,
+                        "state": "started",
+                        "warnings": [
+                            "Host '192.168.1.9' is using the discovered Python interpreter at '/usr/bin/python3.14', but future installation of another Python interpreter could cause a different interpreter to be discovered."
+                        ]
+                    },
+                    "resolved_action": "ansible.builtin.wait_for",
+                    "role": "create-vms",
+                    "start": "2026-05-12T03:59:27.810565+00:00",
+                    "task": "testar se google.com:443 está acessível com wait_for",
+                    "task_action": "ansible.builtin.wait_for",
+                    "task_args": "",
+                    "task_path": "/home/belbeth/projects/create-vms/create-vms/tasks/main.yml:4",
+                    "task_uuid": "3fc63426-c499-bc45-d24b-00000000000b",
+                    "uuid": "55742e90-7cac-4e69-8388-c5dd5caaad05"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "192.168.122.148",
+                    "__number": 1,
+                    "__result": "Failed",
+                    "__task": "testar se google.com:443 está acessível com wait_for",
+                    "__task_action": "ansible.builtin.wait_for",
+                    "duration": 0.286442,
+                    "end": "2026-05-12T03:59:28.101812+00:00",
+                    "event_loop": null,
+                    "host": "192.168.122.148",
+                    "ignore_errors": null,
+                    "play": "Rodar automação nos hosts recebidos",
+                    "play_pattern": "dinamico",
+                    "play_uuid": "3fc63426-c499-bc45-d24b-000000000005",
+                    "playbook": "/home/belbeth/projects/create-vms/curl.yml",
+                    "playbook_uuid": "4d234051-2327-4c17-9332-2f3a2430be3e",
+                    "remote_addr": "192.168.122.148",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "ansible_facts": {
+                            "discovered_interpreter_python": "/usr/bin/python3"
+                        },
+                        "changed": false,
+                        "exception": "(traceback unavailable)",
+                        "module_stderr": "Shared connection to 192.168.122.148 closed.\r\n",
+                        "module_stdout": "/bin/sh: 1: /usr/bin/python3: not found\r\n",
+                        "msg": "The module interpreter '/usr/bin/python3' was not found.",
+                        "rc": 127,
+                        "warnings": [
+                            "No python interpreters found for host '192.168.122.148' (tried ['python3.14', 'python3.13', 'python3.12', 'python3.11', 'python3.10', 'python3.9', '/usr/bin/python3', 'python3'])."
+                        ]
+                    },
+                    "resolved_action": "ansible.builtin.wait_for",
+                    "role": "create-vms",
+                    "start": "2026-05-12T03:59:27.815370+00:00",
+                    "task": "testar se google.com:443 está acessível com wait_for",
+                    "task_action": "ansible.builtin.wait_for",
+                    "task_args": "",
+                    "task_path": "/home/belbeth/projects/create-vms/create-vms/tasks/main.yml:4",
+                    "task_uuid": "3fc63426-c499-bc45-d24b-00000000000b",
+                    "uuid": "659f3e72-a6d7-48cd-b468-21743ae69993"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "192.168.122.130",
+                    "__number": 2,
+                    "__result": "Ok",
+                    "__task": "testar se google.com:443 está acessível com wait_for",
+                    "__task_action": "ansible.builtin.wait_for",
+                    "duration": 0.441537,
+                    "end": "2026-05-12T03:59:28.261378+00:00",
+                    "event_loop": null,
+                    "host": "192.168.122.130",
+                    "play": "Rodar automação nos hosts recebidos",
+                    "play_pattern": "dinamico",
+                    "play_uuid": "3fc63426-c499-bc45-d24b-000000000005",
+                    "playbook": "/home/belbeth/projects/create-vms/curl.yml",
+                    "playbook_uuid": "4d234051-2327-4c17-9332-2f3a2430be3e",
+                    "remote_addr": "192.168.122.130",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "ansible_facts": {
+                            "discovered_interpreter_python": "/usr/bin/python3.13"
+                        },
+                        "changed": false,
+                        "elapsed": 0,
+                        "invocation": {
+                            "module_args": {
+                                "active_connection_states": [
+                                    "ESTABLISHED",
+                                    "FIN_WAIT1",
+                                    "FIN_WAIT2",
+                                    "SYN_RECV",
+                                    "SYN_SENT",
+                                    "TIME_WAIT"
+                                ],
+                                "connect_timeout": 5,
+                                "delay": 0,
+                                "exclude_hosts": null,
+                                "host": "google.com",
+                                "msg": null,
+                                "path": null,
+                                "port": 443,
+                                "search_regex": null,
+                                "sleep": 1,
+                                "state": "started",
+                                "timeout": 10
+                            }
+                        },
+                        "match_groupdict": {},
+                        "match_groups": [],
+                        "path": null,
+                        "port": 443,
+                        "search_regex": null,
+                        "state": "started",
+                        "warnings": [
+                            "Host '192.168.122.130' is using the discovered Python interpreter at '/usr/bin/python3.13', but future installation of another Python interpreter could cause a different interpreter to be discovered."
+                        ]
+                    },
+                    "resolved_action": "ansible.builtin.wait_for",
+                    "role": "create-vms",
+                    "start": "2026-05-12T03:59:27.819841+00:00",
+                    "task": "testar se google.com:443 está acessível com wait_for",
+                    "task_action": "ansible.builtin.wait_for",
+                    "task_args": "",
+                    "task_path": "/home/belbeth/projects/create-vms/create-vms/tasks/main.yml:4",
+                    "task_uuid": "3fc63426-c499-bc45-d24b-00000000000b",
+                    "uuid": "5ff44102-7db5-4172-bb76-2d1ecfc66e39"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "192.168.1.9",
+                    "__number": 3,
+                    "__result": "Ok",
+                    "__task": "debug resultado do wait_for",
+                    "__task_action": "ansible.builtin.debug",
+                    "duration": 0.010535,
+                    "end": "2026-05-12T03:59:29.124176+00:00",
+                    "event_loop": null,
+                    "host": "192.168.1.9",
+                    "play": "Rodar automação nos hosts recebidos",
+                    "play_pattern": "dinamico",
+                    "play_uuid": "3fc63426-c499-bc45-d24b-000000000005",
+                    "playbook": "/home/belbeth/projects/create-vms/curl.yml",
+                    "playbook_uuid": "4d234051-2327-4c17-9332-2f3a2430be3e",
+                    "remote_addr": "192.168.1.9",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "_ansible_verbose_always": true,
+                        "changed": false,
+                        "waitfor_google": {
+                            "ansible_facts": {
+                                "discovered_interpreter_python": "/usr/bin/python3.14"
+                            },
+                            "changed": false,
+                            "elapsed": 0,
+                            "failed": false,
+                            "match_groupdict": {},
+                            "match_groups": [],
+                            "path": null,
+                            "port": 443,
+                            "search_regex": null,
+                            "state": "started",
+                            "warnings": [
+                                "Host '192.168.1.9' is using the discovered Python interpreter at '/usr/bin/python3.14', but future installation of another Python interpreter could cause a different interpreter to be discovered."
+                            ]
+                        }
+                    },
+                    "resolved_action": "ansible.builtin.debug",
+                    "role": "create-vms",
+                    "start": "2026-05-12T03:59:29.113641+00:00",
+                    "task": "debug resultado do wait_for",
+                    "task_action": "ansible.builtin.debug",
+                    "task_args": "",
+                    "task_path": "/home/belbeth/projects/create-vms/create-vms/tasks/main.yml:11",
+                    "task_uuid": "3fc63426-c499-bc45-d24b-00000000000c",
+                    "uuid": "858db06d-2da7-45b5-96ac-7e9b1c1bc534"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "192.168.122.130",
+                    "__number": 4,
+                    "__result": "Ok",
+                    "__task": "debug resultado do wait_for",
+                    "__task_action": "ansible.builtin.debug",
+                    "duration": 0.010863,
+                    "end": "2026-05-12T03:59:29.128620+00:00",
+                    "event_loop": null,
+                    "host": "192.168.122.130",
+                    "play": "Rodar automação nos hosts recebidos",
+                    "play_pattern": "dinamico",
+                    "play_uuid": "3fc63426-c499-bc45-d24b-000000000005",
+                    "playbook": "/home/belbeth/projects/create-vms/curl.yml",
+                    "playbook_uuid": "4d234051-2327-4c17-9332-2f3a2430be3e",
+                    "remote_addr": "192.168.122.130",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "_ansible_verbose_always": true,
+                        "changed": false,
+                        "waitfor_google": {
+                            "ansible_facts": {
+                                "discovered_interpreter_python": "/usr/bin/python3.13"
+                            },
+                            "changed": false,
+                            "elapsed": 0,
+                            "failed": false,
+                            "match_groupdict": {},
+                            "match_groups": [],
+                            "path": null,
+                            "port": 443,
+                            "search_regex": null,
+                            "state": "started",
+                            "warnings": [
+                                "Host '192.168.122.130' is using the discovered Python interpreter at '/usr/bin/python3.13', but future installation of another Python interpreter could cause a different interpreter to be discovered."
+                            ]
+                        }
+                    },
+                    "resolved_action": "ansible.builtin.debug",
+                    "role": "create-vms",
+                    "start": "2026-05-12T03:59:29.117757+00:00",
+                    "task": "debug resultado do wait_for",
+                    "task_action": "ansible.builtin.debug",
+                    "task_args": "",
+                    "task_path": "/home/belbeth/projects/create-vms/create-vms/tasks/main.yml:11",
+                    "task_uuid": "3fc63426-c499-bc45-d24b-00000000000c",
+                    "uuid": "ca6475ff-affe-4ce9-b9d3-aaa0526a8989"
+                },
+                {
+                    "__changed": true,
+                    "__duration": "0s",
+                    "__host": "192.168.122.148",
+                    "__number": 5,
+                    "__result": "Ok",
+                    "__task": "tentar curl telnet para google.com:443 como fallback",
+                    "__task_action": "ansible.builtin.raw",
+                    "duration": 0.217335,
+                    "end": "2026-05-12T03:59:29.349014+00:00",
+                    "event_loop": null,
+                    "host": "192.168.122.148",
+                    "play": "Rodar automação nos hosts recebidos",
+                    "play_pattern": "dinamico",
+                    "play_uuid": "3fc63426-c499-bc45-d24b-000000000005",
+                    "playbook": "/home/belbeth/projects/create-vms/curl.yml",
+                    "playbook_uuid": "4d234051-2327-4c17-9332-2f3a2430be3e",
+                    "remote_addr": "192.168.122.148",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "changed": true,
+                        "rc": 0,
+                        "stderr": "Shared connection to 192.168.122.148 closed.\r\n",
+                        "stderr_lines": [
+                            "Shared connection to 192.168.122.148 closed."
+                        ],
+                        "stdout": "success\r\n",
+                        "stdout_lines": [
+                            "success"
+                        ]
+                    },
+                    "resolved_action": "ansible.builtin.raw",
+                    "role": "create-vms",
+                    "start": "2026-05-12T03:59:29.131679+00:00",
+                    "task": "tentar curl telnet para google.com:443 como fallback",
+                    "task_action": "ansible.builtin.raw",
+                    "task_args": "",
+                    "task_path": "/home/belbeth/projects/create-vms/create-vms/tasks/main.yml:15",
+                    "task_uuid": "3fc63426-c499-bc45-d24b-00000000000d",
+                    "uuid": "7acaa23e-6a5c-4931-9c85-05c0edda2064"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "192.168.122.148",
+                    "__number": 6,
+                    "__result": "Ok",
+                    "__task": "debug resultado do curl",
+                    "__task_action": "ansible.builtin.debug",
+                    "duration": 0.010829,
+                    "end": "2026-05-12T03:59:29.362883+00:00",
+                    "event_loop": null,
+                    "host": "192.168.122.148",
+                    "play": "Rodar automação nos hosts recebidos",
+                    "play_pattern": "dinamico",
+                    "play_uuid": "3fc63426-c499-bc45-d24b-000000000005",
+                    "playbook": "/home/belbeth/projects/create-vms/curl.yml",
+                    "playbook_uuid": "4d234051-2327-4c17-9332-2f3a2430be3e",
+                    "remote_addr": "192.168.122.148",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "_ansible_verbose_always": true,
+                        "changed": false,
+                        "curl_google.stdout": "success\r\n"
+                    },
+                    "resolved_action": "ansible.builtin.debug",
+                    "role": "create-vms",
+                    "start": "2026-05-12T03:59:29.352054+00:00",
+                    "task": "debug resultado do curl",
+                    "task_action": "ansible.builtin.debug",
+                    "task_args": "",
+                    "task_path": "/home/belbeth/projects/create-vms/create-vms/tasks/main.yml:19",
+                    "task_uuid": "3fc63426-c499-bc45-d24b-00000000000e",
+                    "uuid": "5adc915f-e078-453b-86b5-3166d5316b49"
+                }
+            ],
+            "uuid": "3fc63426-c499-bc45-d24b-000000000005"
+        }
+    ],
+    "settings_entries": {
+        "ansible-navigator": {
+            "ansible": {
+                "cmdline": "--extra-vars maquinas=192.168.1.9,192.168.122.148,192.168.122.130",
+                "config": {
+                    "help": false
+                },
+                "doc": {
+                    "help": false,
+                    "plugin": {
+                        "type": "module"
+                    }
+                },
+                "inventory": {
+                    "entries": [
+                        "/home/belbeth/projects/create-vms/inventory"
+                    ],
+                    "help": false
+                },
+                "playbook": {
+                    "help": false,
+                    "path": "/home/belbeth/projects/create-vms/curl.yml"
+                }
+            },
+            "ansible-builder": {
+                "help": false,
+                "workdir": "/home/belbeth/projects/create-vms"
+            },
+            "ansible-runner": {
+                "job-events": false
+            },
+            "app": "run",
+            "collection-doc-cache-path": "/home/belbeth/.cache/ansible-navigator/collection_doc_cache.db",
+            "color": {
+                "enable": true,
+                "osc4": true
+            },
+            "editor": {
+                "command": "/usr/bin/nano {filename}",
+                "console": true
+            },
+            "enable-prompts": false,
+            "exec": {
+                "command": "/bin/bash",
+                "shell": true
+            },
+            "execution-environment": {
+                "container-engine": "podman",
+                "enabled": true,
+                "image": "ghcr.io/ansible/community-ansible-dev-tools:latest",
+                "pull": {
+                    "policy": "tag"
+                }
+            },
+            "format": "yaml",
+            "images": {
+                "details": [
+                    "everything"
+                ]
+            },
+            "logging": {
+                "append": true,
+                "file": "/home/belbeth/projects/create-vms/ansible-navigator.log",
+                "level": "warning"
+            },
+            "mode": "interactive",
+            "playbook-artifact": {
+                "enable": true,
+                "save-as": "{playbook_dir}/{playbook_name}-artifact-{time_stamp}.json"
+            },
+            "settings": {
+                "effective": false,
+                "sample": false,
+                "schema": "json",
+                "sources": false
+            },
+            "time-zone": "UTC"
+        }
+    },
+    "settings_sources": {
+        "ansible-navigator.ansible-builder.help": "Defaults",
+        "ansible-navigator.ansible-builder.workdir": "Defaults",
+        "ansible-navigator.ansible-lint.config": "Not set",
+        "ansible-navigator.ansible-lint.lintables": "Not set",
+        "ansible-navigator.ansible-runner.artifact-dir": "Not set",
+        "ansible-navigator.ansible-runner.job-events": "Defaults",
+        "ansible-navigator.ansible-runner.rotate-artifacts-count": "Not set",
+        "ansible-navigator.ansible-runner.timeout": "Not set",
+        "ansible-navigator.ansible.cmdline": "Previous cli command",
+        "ansible-navigator.ansible.config.help": "Defaults",
+        "ansible-navigator.ansible.config.path": "Not set",
+        "ansible-navigator.ansible.doc.help": "Defaults",
+        "ansible-navigator.ansible.doc.plugin.name": "Not set",
+        "ansible-navigator.ansible.doc.plugin.type": "Defaults",
+        "ansible-navigator.ansible.inventory.entries": "Ansible configuration file",
+        "ansible-navigator.ansible.inventory.help": "Defaults",
+        "ansible-navigator.ansible.playbook.help": "Defaults",
+        "ansible-navigator.ansible.playbook.path": "Previous cli command",
+        "ansible-navigator.app": "Command line",
+        "ansible-navigator.collection-doc-cache-path": "Defaults",
+        "ansible-navigator.color.enable": "Defaults",
+        "ansible-navigator.color.osc4": "Defaults",
+        "ansible-navigator.editor.command": "Defaults",
+        "ansible-navigator.editor.console": "Defaults",
+        "ansible-navigator.enable-prompts": "Defaults",
+        "ansible-navigator.exec.command": "Defaults",
+        "ansible-navigator.exec.shell": "Defaults",
+        "ansible-navigator.execution-environment.container-engine": "Automatically determined",
+        "ansible-navigator.execution-environment.container-options": "Not set",
+        "ansible-navigator.execution-environment.enabled": "Defaults",
+        "ansible-navigator.execution-environment.environment-variables.pass": "Not set",
+        "ansible-navigator.execution-environment.environment-variables.set": "Not set",
+        "ansible-navigator.execution-environment.image": "Defaults",
+        "ansible-navigator.execution-environment.pull.arguments": "Not set",
+        "ansible-navigator.execution-environment.pull.policy": "Defaults",
+        "ansible-navigator.execution-environment.volume-mounts": "Not set",
+        "ansible-navigator.format": "Defaults",
+        "ansible-navigator.images.details": "Defaults",
+        "ansible-navigator.inventory-columns": "Not set",
+        "ansible-navigator.logging.append": "Defaults",
+        "ansible-navigator.logging.file": "Defaults",
+        "ansible-navigator.logging.level": "Defaults",
+        "ansible-navigator.mode": "Defaults",
+        "ansible-navigator.playbook-artifact.enable": "Defaults",
+        "ansible-navigator.playbook-artifact.replay": "Not set",
+        "ansible-navigator.playbook-artifact.save-as": "Defaults",
+        "ansible-navigator.settings.effective": "Defaults",
+        "ansible-navigator.settings.sample": "Defaults",
+        "ansible-navigator.settings.schema": "Defaults",
+        "ansible-navigator.settings.sources": "Defaults",
+        "ansible-navigator.time-zone": "Defaults",
+        "settings_file_path": "None",
+        "settings_file_source": "None"
+    },
+    "status": "successful",
+    "status_color": 10,
+    "stdout": [
+        "",
+        "PLAY [Criar inventário dinâmico a partir de extra-vars] ************************",
+        "",
+        "TASK [Adicionar hosts ao grupo temporário 'grupo_dinamico'] ********************",
+        "\u001b[0;33mchanged: [localhost] => (item=192.168.1.9)\u001b[0m",
+        "\u001b[0;33mchanged: [localhost] => (item=192.168.122.148)\u001b[0m",
+        "\u001b[0;33mchanged: [localhost] => (item=192.168.122.130)\u001b[0m",
+        "",
+        "PLAY [Rodar automação nos hosts recebidos] *************************************",
+        "",
+        "TASK [create-vms : testar se google.com:443 está acessível com wait_for] *******",
+        "\u001b[1;35m[WARNING]: No python interpreters found for host '192.168.122.148' (tried ['python3.14', 'python3.13', 'python3.12', 'python3.11', 'python3.10', 'python3.9', '/usr/bin/python3', 'python3']).\u001b[0m",
+        "\u001b[0;31m[ERROR]: Task failed: Action failed: The module interpreter '/usr/bin/python3' was not found.\u001b[0m",
+        "\u001b[0;31m\u001b[0m",
+        "\u001b[0;31mTask failed: Action failed.\u001b[0m",
+        "\u001b[0;31mOrigin: /home/belbeth/projects/create-vms/create-vms/tasks/main.yml:4:7\u001b[0m",
+        "\u001b[0;31m\u001b[0m",
+        "\u001b[0;31m2\u001b[0m",
+        "\u001b[0;31m3 - block:\u001b[0m",
+        "\u001b[0;31m4     - name: testar se google.com:443 está acessível com wait_for\u001b[0m",
+        "\u001b[0;31m        ^ column 7\u001b[0m",
+        "\u001b[0;31m\u001b[0m",
+        "\u001b[0;31m<<< caused by >>>\u001b[0m",
+        "\u001b[0;31m\u001b[0m",
+        "\u001b[0;31mThe module interpreter '/usr/bin/python3' was not found. Consider overriding the configured interpreter path for this host. See stdout/stderr for the returned output.\u001b[0m",
+        "\u001b[0;31m\u001b[0m",
+        "\u001b[0;31mfatal: [192.168.122.148]: FAILED! => {\"ansible_facts\": {\"discovered_interpreter_python\": \"/usr/bin/python3\"}, \"changed\": false, \"module_stderr\": \"Shared connection to 192.168.122.148 closed.\\r\\n\", \"module_stdout\": \"/bin/sh: 1: /usr/bin/python3: not found\\r\\n\", \"msg\": \"The module interpreter '/usr/bin/python3' was not found.\", \"rc\": 127}\u001b[0m",
+        "\u001b[1;35m[WARNING]: Host '192.168.122.130' is using the discovered Python interpreter at '/usr/bin/python3.13', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.20/reference_appendices/interpreter_discovery.html for more information.\u001b[0m",
+        "\u001b[0;32mok: [192.168.122.130]\u001b[0m",
+        "\u001b[1;35m[WARNING]: Host '192.168.1.9' is using the discovered Python interpreter at '/usr/bin/python3.14', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.20/reference_appendices/interpreter_discovery.html for more information.\u001b[0m",
+        "\u001b[0;32mok: [192.168.1.9]\u001b[0m",
+        "",
+        "TASK [create-vms : debug resultado do wait_for] ********************************",
+        "\u001b[0;32mok: [192.168.1.9] => {\u001b[0m",
+        "\u001b[0;32m    \"waitfor_google\": {\u001b[0m",
+        "\u001b[0;32m        \"ansible_facts\": {\u001b[0m",
+        "\u001b[0;32m            \"discovered_interpreter_python\": \"/usr/bin/python3.14\"\u001b[0m",
+        "\u001b[0;32m        },\u001b[0m",
+        "\u001b[0;32m        \"changed\": false,\u001b[0m",
+        "\u001b[0;32m        \"elapsed\": 0,\u001b[0m",
+        "\u001b[0;32m        \"failed\": false,\u001b[0m",
+        "\u001b[0;32m        \"match_groupdict\": {},\u001b[0m",
+        "\u001b[0;32m        \"match_groups\": [],\u001b[0m",
+        "\u001b[0;32m        \"path\": null,\u001b[0m",
+        "\u001b[0;32m        \"port\": 443,\u001b[0m",
+        "\u001b[0;32m        \"search_regex\": null,\u001b[0m",
+        "\u001b[0;32m        \"state\": \"started\",\u001b[0m",
+        "\u001b[0;32m        \"warnings\": [\u001b[0m",
+        "\u001b[0;32m            \"Host '192.168.1.9' is using the discovered Python interpreter at '/usr/bin/python3.14', but future installation of another Python interpreter could cause a different interpreter to be discovered.\"\u001b[0m",
+        "\u001b[0;32m        ]\u001b[0m",
+        "\u001b[0;32m    }\u001b[0m",
+        "\u001b[0;32m}\u001b[0m",
+        "\u001b[0;32mok: [192.168.122.130] => {\u001b[0m",
+        "\u001b[0;32m    \"waitfor_google\": {\u001b[0m",
+        "\u001b[0;32m        \"ansible_facts\": {\u001b[0m",
+        "\u001b[0;32m            \"discovered_interpreter_python\": \"/usr/bin/python3.13\"\u001b[0m",
+        "\u001b[0;32m        },\u001b[0m",
+        "\u001b[0;32m        \"changed\": false,\u001b[0m",
+        "\u001b[0;32m        \"elapsed\": 0,\u001b[0m",
+        "\u001b[0;32m        \"failed\": false,\u001b[0m",
+        "\u001b[0;32m        \"match_groupdict\": {},\u001b[0m",
+        "\u001b[0;32m        \"match_groups\": [],\u001b[0m",
+        "\u001b[0;32m        \"path\": null,\u001b[0m",
+        "\u001b[0;32m        \"port\": 443,\u001b[0m",
+        "\u001b[0;32m        \"search_regex\": null,\u001b[0m",
+        "\u001b[0;32m        \"state\": \"started\",\u001b[0m",
+        "\u001b[0;32m        \"warnings\": [\u001b[0m",
+        "\u001b[0;32m            \"Host '192.168.122.130' is using the discovered Python interpreter at '/usr/bin/python3.13', but future installation of another Python interpreter could cause a different interpreter to be discovered.\"\u001b[0m",
+        "\u001b[0;32m        ]\u001b[0m",
+        "\u001b[0;32m    }\u001b[0m",
+        "\u001b[0;32m}\u001b[0m",
+        "",
+        "TASK [create-vms : tentar curl telnet para google.com:443 como fallback] *******",
+        "\u001b[0;33mchanged: [192.168.122.148]\u001b[0m",
+        "",
+        "TASK [create-vms : debug resultado do curl] ************************************",
+        "\u001b[0;32mok: [192.168.122.148] => {\u001b[0m",
+        "\u001b[0;32m    \"curl_google.stdout\": \"success\\r\\n\"\u001b[0m",
+        "\u001b[0;32m}\u001b[0m",
+        "",
+        "PLAY RECAP *********************************************************************",
+        "\u001b[0;32m192.168.1.9\u001b[0m                : \u001b[0;32mok=2   \u001b[0m changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   ",
+        "\u001b[0;32m192.168.122.130\u001b[0m            : \u001b[0;32mok=2   \u001b[0m changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   ",
+        "\u001b[0;33m192.168.122.148\u001b[0m            : \u001b[0;32mok=2   \u001b[0m \u001b[0;33mchanged=1   \u001b[0m unreachable=0    failed=0    skipped=0    \u001b[0;32mrescued=1   \u001b[0m ignored=0   ",
+        "\u001b[0;33mlocalhost\u001b[0m                  : \u001b[0;32mok=1   \u001b[0m \u001b[0;33mchanged=1   \u001b[0m unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   "
+    ],
+    "version": "2.0.0"
+}

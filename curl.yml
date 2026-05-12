@@ -1,7 +1,18 @@
-#SPDX-License-Identifier: MIT-0
 ---
-- hosts: localhost
-  connection: local
-  gather_facts: no
+- name: Criar inventário dinâmico a partir de extra-vars
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Adicionar hosts ao grupo temporário 'grupo_dinamico'
+      add_host:
+        name: "{{ item }}"
+        groups: dinamico
+      loop: "{{ maquinas.split(',') }}"
+
+- name: Rodar automação nos hosts recebidos
+  gather_facts: false
+  hosts: dinamico
+  vars:
+    lista_destinos: "{{ destinos.split(',') }}"
   roles:
     - create-vms

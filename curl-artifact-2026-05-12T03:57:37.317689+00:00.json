@@ -1,0 +1,393 @@
+{
+    "plays": [
+        {
+            "__play_name": "Criar inventário dinâmico a partir de extra-vars",
+            "name": "Criar inventário dinâmico a partir de extra-vars",
+            "pattern": "localhost",
+            "play": "Criar inventário dinâmico a partir de extra-vars",
+            "play_pattern": "localhost",
+            "play_uuid": "3fb40055-f40d-6de9-30ff-000000000002",
+            "playbook": "/home/belbeth/projects/create-vms/curl.yml",
+            "playbook_uuid": "f4dfc77f-041b-4459-b209-5cf297d86054",
+            "tasks": [
+                {
+                    "__changed": true,
+                    "__duration": "0s",
+                    "__host": "localhost",
+                    "__number": 0,
+                    "__result": "Ok",
+                    "__task": "Adicionar hosts ao grupo temporário 'grupo_dinamico'",
+                    "__task_action": "add_host",
+                    "duration": 0.018436,
+                    "end": "2026-05-12T03:57:36.950438+00:00",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "Criar inventário dinâmico a partir de extra-vars",
+                    "play_pattern": "localhost",
+                    "play_uuid": "3fb40055-f40d-6de9-30ff-000000000002",
+                    "playbook": "/home/belbeth/projects/create-vms/curl.yml",
+                    "playbook_uuid": "f4dfc77f-041b-4459-b209-5cf297d86054",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "changed": true,
+                        "msg": "All items completed",
+                        "results": [
+                            {
+                                "_ansible_item_label": "192.168.1.9",
+                                "_ansible_no_log": false,
+                                "add_host": {
+                                    "groups": [
+                                        "dinamico"
+                                    ],
+                                    "host_name": "192.168.1.9",
+                                    "host_vars": {}
+                                },
+                                "ansible_loop_var": "item",
+                                "changed": true,
+                                "failed": false,
+                                "item": "192.168.1.9"
+                            },
+                            {
+                                "_ansible_item_label": "192.168.122.148",
+                                "_ansible_no_log": false,
+                                "add_host": {
+                                    "groups": [
+                                        "dinamico"
+                                    ],
+                                    "host_name": "192.168.122.148",
+                                    "host_vars": {}
+                                },
+                                "ansible_loop_var": "item",
+                                "changed": true,
+                                "failed": false,
+                                "item": "192.168.122.148"
+                            },
+                            {
+                                "_ansible_item_label": "192.168.122.130",
+                                "_ansible_no_log": false,
+                                "add_host": {
+                                    "groups": [
+                                        "dinamico"
+                                    ],
+                                    "host_name": "192.168.122.130",
+                                    "host_vars": {}
+                                },
+                                "ansible_loop_var": "item",
+                                "changed": true,
+                                "failed": false,
+                                "item": "192.168.122.130"
+                            }
+                        ]
+                    },
+                    "resolved_action": "ansible.builtin.add_host",
+                    "start": "2026-05-12T03:57:36.932002+00:00",
+                    "task": "Adicionar hosts ao grupo temporário 'grupo_dinamico'",
+                    "task_action": "add_host",
+                    "task_args": "",
+                    "task_path": "/home/belbeth/projects/create-vms/curl.yml:6",
+                    "task_uuid": "3fb40055-f40d-6de9-30ff-000000000004",
+                    "uuid": "e285ad89-fbcf-4a3b-9d52-92e1fb591712"
+                }
+            ],
+            "uuid": "3fb40055-f40d-6de9-30ff-000000000002"
+        },
+        {
+            "__play_name": "Rodar automação nos hosts recebidos",
+            "name": "Rodar automação nos hosts recebidos",
+            "pattern": "dinamico",
+            "play": "Rodar automação nos hosts recebidos",
+            "play_pattern": "dinamico",
+            "play_uuid": "3fb40055-f40d-6de9-30ff-000000000005",
+            "playbook": "/home/belbeth/projects/create-vms/curl.yml",
+            "playbook_uuid": "f4dfc77f-041b-4459-b209-5cf297d86054",
+            "tasks": [
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "192.168.1.9",
+                    "__number": 0,
+                    "__result": "Unreachable",
+                    "__task": "testar se google.com:443 está acessível com wait_for",
+                    "__task_action": "ansible.builtin.wait_for",
+                    "duration": 0.122253,
+                    "end": "2026-05-12T03:57:37.078265+00:00",
+                    "host": "192.168.1.9",
+                    "play": "Rodar automação nos hosts recebidos",
+                    "play_pattern": "dinamico",
+                    "play_uuid": "3fb40055-f40d-6de9-30ff-000000000005",
+                    "playbook": "/home/belbeth/projects/create-vms/curl.yml",
+                    "playbook_uuid": "f4dfc77f-041b-4459-b209-5cf297d86054",
+                    "remote_addr": "192.168.1.9",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "changed": false,
+                        "exception": "(traceback unavailable)",
+                        "msg": "Task failed: Failed to connect to the host via ssh: root@192.168.1.9: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).",
+                        "unreachable": true
+                    },
+                    "resolved_action": "ansible.builtin.wait_for",
+                    "role": "create-vms",
+                    "start": "2026-05-12T03:57:36.956012+00:00",
+                    "task": "testar se google.com:443 está acessível com wait_for",
+                    "task_action": "ansible.builtin.wait_for",
+                    "task_args": "",
+                    "task_path": "/home/belbeth/projects/create-vms/create-vms/tasks/main.yml:4",
+                    "task_uuid": "3fb40055-f40d-6de9-30ff-00000000000b",
+                    "uuid": "f50f4cc4-0946-4d39-a334-772937c31bb4"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "192.168.122.148",
+                    "__number": 1,
+                    "__result": "Unreachable",
+                    "__task": "testar se google.com:443 está acessível com wait_for",
+                    "__task_action": "ansible.builtin.wait_for",
+                    "duration": 0.046812,
+                    "end": "2026-05-12T03:57:37.007415+00:00",
+                    "host": "192.168.122.148",
+                    "play": "Rodar automação nos hosts recebidos",
+                    "play_pattern": "dinamico",
+                    "play_uuid": "3fb40055-f40d-6de9-30ff-000000000005",
+                    "playbook": "/home/belbeth/projects/create-vms/curl.yml",
+                    "playbook_uuid": "f4dfc77f-041b-4459-b209-5cf297d86054",
+                    "remote_addr": "192.168.122.148",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "changed": false,
+                        "exception": "(traceback unavailable)",
+                        "msg": "Task failed: Failed to connect to the host via ssh: root@192.168.122.148: Permission denied (publickey,password).",
+                        "unreachable": true
+                    },
+                    "resolved_action": "ansible.builtin.wait_for",
+                    "role": "create-vms",
+                    "start": "2026-05-12T03:57:36.960603+00:00",
+                    "task": "testar se google.com:443 está acessível com wait_for",
+                    "task_action": "ansible.builtin.wait_for",
+                    "task_args": "",
+                    "task_path": "/home/belbeth/projects/create-vms/create-vms/tasks/main.yml:4",
+                    "task_uuid": "3fb40055-f40d-6de9-30ff-00000000000b",
+                    "uuid": "94b1eeaf-33a5-4eeb-be41-f6e920f7e34c"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "192.168.122.130",
+                    "__number": 2,
+                    "__result": "Unreachable",
+                    "__task": "testar se google.com:443 está acessível com wait_for",
+                    "__task_action": "ansible.builtin.wait_for",
+                    "duration": 0.04363,
+                    "end": "2026-05-12T03:57:37.008700+00:00",
+                    "host": "192.168.122.130",
+                    "play": "Rodar automação nos hosts recebidos",
+                    "play_pattern": "dinamico",
+                    "play_uuid": "3fb40055-f40d-6de9-30ff-000000000005",
+                    "playbook": "/home/belbeth/projects/create-vms/curl.yml",
+                    "playbook_uuid": "f4dfc77f-041b-4459-b209-5cf297d86054",
+                    "remote_addr": "192.168.122.130",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "changed": false,
+                        "exception": "(traceback unavailable)",
+                        "msg": "Task failed: Failed to connect to the host via ssh: root@192.168.122.130: Permission denied (publickey,password).",
+                        "unreachable": true
+                    },
+                    "resolved_action": "ansible.builtin.wait_for",
+                    "role": "create-vms",
+                    "start": "2026-05-12T03:57:36.965070+00:00",
+                    "task": "testar se google.com:443 está acessível com wait_for",
+                    "task_action": "ansible.builtin.wait_for",
+                    "task_args": "",
+                    "task_path": "/home/belbeth/projects/create-vms/create-vms/tasks/main.yml:4",
+                    "task_uuid": "3fb40055-f40d-6de9-30ff-00000000000b",
+                    "uuid": "b8453dc8-6fb1-439c-ba04-693303f04d6e"
+                }
+            ],
+            "uuid": "3fb40055-f40d-6de9-30ff-000000000005"
+        }
+    ],
+    "settings_entries": {
+        "ansible-navigator": {
+            "ansible": {
+                "cmdline": "--extra-vars maquinas=192.168.1.9,192.168.122.148,192.168.122.130",
+                "config": {
+                    "help": false
+                },
+                "doc": {
+                    "help": false,
+                    "plugin": {
+                        "type": "module"
+                    }
+                },
+                "inventory": {
+                    "entries": [
+                        "/home/belbeth/projects/create-vms/inventory"
+                    ],
+                    "help": false
+                },
+                "playbook": {
+                    "help": false,
+                    "path": "/home/belbeth/projects/create-vms/curl.yml"
+                }
+            },
+            "ansible-builder": {
+                "help": false,
+                "workdir": "/home/belbeth/projects/create-vms"
+            },
+            "ansible-runner": {
+                "job-events": false
+            },
+            "app": "run",
+            "collection-doc-cache-path": "/home/belbeth/.cache/ansible-navigator/collection_doc_cache.db",
+            "color": {
+                "enable": true,
+                "osc4": true
+            },
+            "editor": {
+                "command": "/usr/bin/nano {filename}",
+                "console": true
+            },
+            "enable-prompts": false,
+            "exec": {
+                "command": "/bin/bash",
+                "shell": true
+            },
+            "execution-environment": {
+                "container-engine": "podman",
+                "enabled": true,
+                "image": "ghcr.io/ansible/community-ansible-dev-tools:latest",
+                "pull": {
+                    "policy": "missing"
+                }
+            },
+            "format": "yaml",
+            "images": {
+                "details": [
+                    "everything"
+                ]
+            },
+            "logging": {
+                "append": true,
+                "file": "/home/belbeth/projects/create-vms/ansible-navigator.log",
+                "level": "warning"
+            },
+            "mode": "stdout",
+            "playbook-artifact": {
+                "enable": true,
+                "save-as": "{playbook_dir}/{playbook_name}-artifact-{time_stamp}.json"
+            },
+            "settings": {
+                "effective": false,
+                "sample": false,
+                "schema": "json",
+                "sources": false
+            },
+            "time-zone": "UTC"
+        }
+    },
+    "settings_sources": {
+        "ansible-navigator.ansible-builder.help": "Defaults",
+        "ansible-navigator.ansible-builder.workdir": "Defaults",
+        "ansible-navigator.ansible-lint.config": "Not set",
+        "ansible-navigator.ansible-lint.lintables": "Not set",
+        "ansible-navigator.ansible-runner.artifact-dir": "Not set",
+        "ansible-navigator.ansible-runner.job-events": "Defaults",
+        "ansible-navigator.ansible-runner.rotate-artifacts-count": "Not set",
+        "ansible-navigator.ansible-runner.timeout": "Not set",
+        "ansible-navigator.ansible.cmdline": "Command line",
+        "ansible-navigator.ansible.config.help": "Defaults",
+        "ansible-navigator.ansible.config.path": "Not set",
+        "ansible-navigator.ansible.doc.help": "Defaults",
+        "ansible-navigator.ansible.doc.plugin.name": "Not set",
+        "ansible-navigator.ansible.doc.plugin.type": "Defaults",
+        "ansible-navigator.ansible.inventory.entries": "Ansible configuration file",
+        "ansible-navigator.ansible.inventory.help": "Defaults",
+        "ansible-navigator.ansible.playbook.help": "Defaults",
+        "ansible-navigator.ansible.playbook.path": "Command line",
+        "ansible-navigator.app": "Command line",
+        "ansible-navigator.collection-doc-cache-path": "Defaults",
+        "ansible-navigator.color.enable": "Defaults",
+        "ansible-navigator.color.osc4": "Defaults",
+        "ansible-navigator.editor.command": "Defaults",
+        "ansible-navigator.editor.console": "Defaults",
+        "ansible-navigator.enable-prompts": "Defaults",
+        "ansible-navigator.exec.command": "Defaults",
+        "ansible-navigator.exec.shell": "Defaults",
+        "ansible-navigator.execution-environment.container-engine": "Automatically determined",
+        "ansible-navigator.execution-environment.container-options": "Not set",
+        "ansible-navigator.execution-environment.enabled": "Defaults",
+        "ansible-navigator.execution-environment.environment-variables.pass": "Not set",
+        "ansible-navigator.execution-environment.environment-variables.set": "Not set",
+        "ansible-navigator.execution-environment.image": "Defaults",
+        "ansible-navigator.execution-environment.pull.arguments": "Not set",
+        "ansible-navigator.execution-environment.pull.policy": "Command line",
+        "ansible-navigator.execution-environment.volume-mounts": "Not set",
+        "ansible-navigator.format": "Defaults",
+        "ansible-navigator.images.details": "Defaults",
+        "ansible-navigator.inventory-columns": "Not set",
+        "ansible-navigator.logging.append": "Defaults",
+        "ansible-navigator.logging.file": "Defaults",
+        "ansible-navigator.logging.level": "Defaults",
+        "ansible-navigator.mode": "Command line",
+        "ansible-navigator.playbook-artifact.enable": "Defaults",
+        "ansible-navigator.playbook-artifact.replay": "Not set",
+        "ansible-navigator.playbook-artifact.save-as": "Defaults",
+        "ansible-navigator.settings.effective": "Defaults",
+        "ansible-navigator.settings.sample": "Defaults",
+        "ansible-navigator.settings.schema": "Defaults",
+        "ansible-navigator.settings.sources": "Defaults",
+        "ansible-navigator.time-zone": "Defaults",
+        "settings_file_path": "None",
+        "settings_file_source": "None"
+    },
+    "status": "failed",
+    "status_color": 9,
+    "stdout": [
+        "",
+        "PLAY [Criar inventário dinâmico a partir de extra-vars] ************************",
+        "",
+        "TASK [Adicionar hosts ao grupo temporário 'grupo_dinamico'] ********************",
+        "\u001b[0;33mchanged: [localhost] => (item=192.168.1.9)\u001b[0m",
+        "\u001b[0;33mchanged: [localhost] => (item=192.168.122.148)\u001b[0m",
+        "\u001b[0;33mchanged: [localhost] => (item=192.168.122.130)\u001b[0m",
+        "",
+        "PLAY [Rodar automação nos hosts recebidos] *************************************",
+        "",
+        "TASK [create-vms : testar se google.com:443 está acessível com wait_for] *******",
+        "\u001b[0;31m[ERROR]: Task failed: Failed to connect to the host via ssh: root@192.168.122.148: Permission denied (publickey,password).\u001b[0m",
+        "\u001b[0;31mOrigin: /home/belbeth/projects/create-vms/create-vms/tasks/main.yml:4:7\u001b[0m",
+        "\u001b[0;31m\u001b[0m",
+        "\u001b[0;31m2\u001b[0m",
+        "\u001b[0;31m3 - block:\u001b[0m",
+        "\u001b[0;31m4     - name: testar se google.com:443 está acessível com wait_for\u001b[0m",
+        "\u001b[0;31m        ^ column 7\u001b[0m",
+        "\u001b[0;31m\u001b[0m",
+        "\u001b[1;31mfatal: [192.168.122.148]: UNREACHABLE! => {\"changed\": false, \"msg\": \"Task failed: Failed to connect to the host via ssh: root@192.168.122.148: Permission denied (publickey,password).\", \"unreachable\": true}\u001b[0m",
+        "\u001b[0;31m[ERROR]: Task failed: Failed to connect to the host via ssh: root@192.168.122.130: Permission denied (publickey,password).\u001b[0m",
+        "\u001b[0;31mOrigin: /home/belbeth/projects/create-vms/create-vms/tasks/main.yml:4:7\u001b[0m",
+        "\u001b[0;31m\u001b[0m",
+        "\u001b[0;31m2\u001b[0m",
+        "\u001b[0;31m3 - block:\u001b[0m",
+        "\u001b[0;31m4     - name: testar se google.com:443 está acessível com wait_for\u001b[0m",
+        "\u001b[0;31m        ^ column 7\u001b[0m",
+        "\u001b[0;31m\u001b[0m",
+        "\u001b[1;31mfatal: [192.168.122.130]: UNREACHABLE! => {\"changed\": false, \"msg\": \"Task failed: Failed to connect to the host via ssh: root@192.168.122.130: Permission denied (publickey,password).\", \"unreachable\": true}\u001b[0m",
+        "\u001b[0;31m[ERROR]: Task failed: Failed to connect to the host via ssh: root@192.168.1.9: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\u001b[0m",
+        "\u001b[0;31mOrigin: /home/belbeth/projects/create-vms/create-vms/tasks/main.yml:4:7\u001b[0m",
+        "\u001b[0;31m\u001b[0m",
+        "\u001b[0;31m2\u001b[0m",
+        "\u001b[0;31m3 - block:\u001b[0m",
+        "\u001b[0;31m4     - name: testar se google.com:443 está acessível com wait_for\u001b[0m",
+        "\u001b[0;31m        ^ column 7\u001b[0m",
+        "\u001b[0;31m\u001b[0m",
+        "\u001b[1;31mfatal: [192.168.1.9]: UNREACHABLE! => {\"changed\": false, \"msg\": \"Task failed: Failed to connect to the host via ssh: root@192.168.1.9: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\", \"unreachable\": true}\u001b[0m",
+        "",
+        "PLAY RECAP *********************************************************************",
+        "\u001b[0;31m192.168.1.9\u001b[0m                : ok=0    changed=0    \u001b[1;31munreachable=1   \u001b[0m failed=0    skipped=0    rescued=0    ignored=0   ",
+        "\u001b[0;31m192.168.122.130\u001b[0m            : ok=0    changed=0    \u001b[1;31munreachable=1   \u001b[0m failed=0    skipped=0    rescued=0    ignored=0   ",
+        "\u001b[0;31m192.168.122.148\u001b[0m            : ok=0    changed=0    \u001b[1;31munreachable=1   \u001b[0m failed=0    skipped=0    rescued=0    ignored=0   ",
+        "\u001b[0;33mlocalhost\u001b[0m                  : \u001b[0;32mok=1   \u001b[0m \u001b[0;33mchanged=1   \u001b[0m unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   "
+    ],
+    "version": "2.0.0"
+}

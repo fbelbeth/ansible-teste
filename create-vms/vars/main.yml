@@ -1,5 +1,4 @@
 #SPDX-License-Identifier: MIT-0
 ---
-# vars file for create-vms
-wait_for_host: google.com
-wait_for_port: 443
+maquina: "google.com"
+porta: 443

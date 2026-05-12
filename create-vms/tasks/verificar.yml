@@ -1,0 +1,34 @@
+---
+- name: Extrair host e porta do destino atual
+  set_fact:
+    target_host: "{{ destino_item.split(':')[0] }}"
+    target_port: "{{ destino_item.split(':')[1] }}"
+- block:
+    - name: testar se {{ target_host }}:{{ target_port }} está acessível com wait_for
+      ansible.builtin.wait_for:
+        host: "{{ target_host }}"
+        port: "{{ target_port }}"
+        timeout: 10
+      register: waitfor_google
+
+    - name: debug resultado do wait_for
+      ansible.builtin.debug:
+        var: waitfor_google
+  rescue:
+    - name: Executar curl -V via raw
+      ansible.builtin.raw: "curl -V"
+      register: curl_output
+      changed_when: false
+
+    - name: Validar se Telnet está presente no output
+      ansible.builtin.debug:
+        msg: "O host possui suporte a Telnet"
+      when: "'telnet' in curl_output.stdout | lower"
+
+    - name: tentar curl telnet para google.com:443 como fallback
+      ansible.builtin.raw: "curl -s --connect-timeout 10 https://{{ target_host }}:{{ target_port }} > /dev/null && echo 'success' || echo 'failure'"
+      register: curl_google
+
+    - name: debug resultado do curl
+      ansible.builtin.debug:
+        var: curl_google.stdout
